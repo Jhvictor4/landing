@@ -113,6 +113,19 @@ export default defineConfig({
   ],
   theme: {
     colors: {
+      primary: {
+        50: '#f9fafb',
+        100: '#f3f4f6',
+        200: '#e5e7eb',
+        300: '#d1d5db',
+        400: '#9ca3af',
+        500: '#6b7280',
+        600: '#4b5563',
+        700: '#374151',
+        800: '#1f2937',
+        900: '#111827',
+        950: '#030712',
+      },
       ...COLOR_PRIMITIVES,
       bolt: {
         elements: {
@@ -226,6 +239,11 @@ export default defineConfig({
           },
         },
       },
+    },
+    fontFamily: {
+      inter: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+      sans: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+      mono: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
     },
   },
   transformers: [transformerDirectives()],

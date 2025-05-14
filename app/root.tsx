@@ -34,7 +34,7 @@ export const links: LinksFunction = () => [
   },
   {
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+    href: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap',
   },
 ];
 
@@ -59,6 +59,13 @@ export const Head = createHead(() => (
     <Meta />
     <Links />
     <script dangerouslySetInnerHTML={{ __html: inlineThemeCode }} />
+    <style>
+      {`
+        :root {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+      `}
+    </style>
   </>
 ));
 
@@ -79,5 +86,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <html lang="en" className="h-full font-sans">
+      <Head />
+      <body className="h-full">
+        <Outlet />
+      </body>
+    </html>
+  );
 }
